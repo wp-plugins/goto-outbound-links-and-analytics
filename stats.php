@@ -538,7 +538,7 @@ function showlist($startdate1,$enddate1){
 	  $DataSet->AddAllSeries();
 	  $DataSet->SetAbsciseLabelSerie("Serie2");
 	$mypath = str_replace("wp-admin", "", getcwd());
-		  $mypath = $mypath . "/wp-content/plugins/outbound-link-stats/";
+		  $mypath = $mypath . "/wp-content/plugins/goto-outbound-links-and-analytics/";
 	  // Initialise the graph
 	  $Test = new pChart(600,400);
 	  $Test->drawFilledRoundedRectangle(7,7,573,303,5,240,240,240);
