@@ -333,7 +333,7 @@ function showlist($startdate1,$enddate1){
   	include("pChart/pChart.class");
 	$mypath = str_replace("wp-admin", "", getcwd());
 	$mypath = $mypath . "/wp-content/plugins/goto-outbound-links-and-analytics/";
-	echo "path: " . $mypath;
+	
 	$monthdate1 = substr($enddate1, -2);
 	$currentmonth = substr($enddate1, -5, 2);
 	$monthdate1 = date("Y")."/" .$currentmonth ."/" . "31";
