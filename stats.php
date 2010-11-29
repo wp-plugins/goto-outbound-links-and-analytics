@@ -136,7 +136,7 @@ function options_page(){
 		fclose($fh);
 		echo "<br />.htaccess done...";
 
-		$file = $thisdir . "/wp-content/plugins/outbound-link-stats/data.php";
+		$file = $thisdir . "/wp-content/plugins/goto-outbound-links-and-analytics/data.php";
 		$newfile = $myFile = $thisdir .$dbgoto ."/index.php";
 
 		if (!copy($file, $newfile)) {
@@ -332,8 +332,8 @@ function showlist($startdate1,$enddate1){
 	include("pChart/pData.class");
   	include("pChart/pChart.class");
 	$mypath = str_replace("wp-admin", "", getcwd());
-	$mypath = $mypath . "/wp-content/plugins/outbound-link-stats/";
-	
+	$mypath = $mypath . "/wp-content/plugins/goto-outbound-links-and-analytics/";
+	echo "path: " . $mypath;
 	$monthdate1 = substr($enddate1, -2);
 	$currentmonth = substr($enddate1, -5, 2);
 	$monthdate1 = date("Y")."/" .$currentmonth ."/" . "31";
