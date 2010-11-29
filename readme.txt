@@ -3,7 +3,7 @@ Contributors: Emil Thidell
 Tags: links, analytics, seo, graph
 Requires at least: 2.7.1
 Tested up to: 3.0.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Lets you create and analyze goto links such as http://www.yoursite.com/goto/[link]/.
 
@@ -36,7 +36,17 @@ Ex:
 
 == Frequently Asked Questions ==
 
-None available
+= How do I add a link to track? =
+
+Fill in URL, Goto, Name and select a parent if you want the link to be in a group.
+
+= How do I select a parent? =
+
+Select a radio button in the list of links.
+
+= Can links have the same names? =
+
+No! If you fill in a name that already exists, the link will automaticly assign itself to the name as a "child".
 
 
 == Changelog ==

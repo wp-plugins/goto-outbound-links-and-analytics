@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Goto Outbound Links and Analytics
-Plugin URI: http://www.emilthidell.se
+Plugin URI: http://wordpress.org/extend/plugins/goto-outbound-links-and-analytics/
 Description: Create and analyze your outbound "Goto" links. Designed for affiliates.
-Version: 1.0
+Version: 1.1
 Author: Emil Thidell
 Author URI: http://www.emilthidell.se
 License: GPL2
@@ -312,7 +312,13 @@ function addlink($url, $goto, $name,$parent){
 		}
 		
 	}else{
-		echo "noparent<br/>";
+		echo "teststestets<br />";
+		$visits=$wpdb->get_results("SELECT * FROM stats_outboundstats WHERE NAME = '" .$name ."'");
+		foreach ($visits as $visit){
+			$parent = $visit->PARENT;
+			
+		}
+		
 	}
 
 	$sql = "INSERT INTO " .$table_name ." (`URL`, `GOTO`, `PARENT`, `NAME`) VALUES('" .$url ."','" .$goto ."','" .$parent ."','" .$name ."');";
