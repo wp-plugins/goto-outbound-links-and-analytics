@@ -3,7 +3,7 @@ Contributors: Emil Thidell
 Tags: links, analytics, seo, graph
 Requires at least: 2.7.1
 Tested up to: 3.0.1
-Stable tag: 1.0
+Stable tag: 1.12
 
 Lets you create and analyze goto links such as http://www.yoursite.com/goto/[link]/.
 
@@ -40,6 +40,12 @@ None available
 
 
 == Changelog ==
+
+= 1.12 =
+Day 1-9 did not work in total graph - Fixed!
+
+= 1.11 =
+Small bugfix.
 
 = 1.1 =
 Fixed a critical bug.

@@ -3,7 +3,7 @@
 Plugin Name: Goto Outbound Links and Analytics
 Plugin URI: http://wordpress.org/extend/plugins/goto-outbound-links-and-analytics/
 Description: Create and analyze your outbound "Goto" links. Designed for affiliates.
-Version: 1.1
+Version: 1.12
 Author: Emil Thidell
 Author URI: http://www.emilthidell.se
 License: GPL2
@@ -348,6 +348,9 @@ function showlist($startdate1,$enddate1){
 	$totalvisits=$wpdb->get_results("SELECT * FROM stats_linkstats WHERE DATUM between '".$monthdate2 ."' AND '" .$monthdate1 ."' ORDER BY DATUM");
 	foreach ($totalvisits as $totalvisit){
 		$calcday = substr($totalvisit->DATUM, -11, 2);
+		if ($calcday == "01"){
+			$calcday = 1;
+		}
 		$startcounter++;
 		if($totalcounter === "nej"){
 			$totalcounter = $calcday;
@@ -355,7 +358,6 @@ function showlist($startdate1,$enddate1){
 			if($calcday === $totalcounter){
 				
 			}else{
-				
 				$total_day[$totalcounter] = $startcounter;
 				$startcounter = 0;
 			}
@@ -374,14 +376,14 @@ function showlist($startdate1,$enddate1){
 	
 
 	
-	$DataSet->AddPoint(0,"Serie1");
+	$DataSet->AddPoint($total_day[1],"Serie1");
 	foreach ($total_day as $i => $value) {
 		$DataSet->AddPoint($total_day[$i],"Serie1");
 		if($total_day[$i] > $totaltop){
 			$totaltop = $total_day[$i];
 		}
 	}
-	$totaltop = $totaltop*2;
+	$totaltop = $totaltop*1.4;
   
   $DataSet->AddAllSeries();
   $DataSet->SetAbsciseLabelSerie();
