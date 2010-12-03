@@ -270,7 +270,7 @@ function options_page(){
 				}
 			}
 			if(!$url && !$goto){
-				if($_POST['date'] === "Search"){
+				if($_PFOST['date'] === "Search"){
 				}else{
 					if($url === "" && $goto === "" && $name === ""){
 						
@@ -350,6 +350,30 @@ function showlist($startdate1,$enddate1){
 		$calcday = substr($totalvisit->DATUM, -11, 2);
 		if ($calcday == "01"){
 			$calcday = 1;
+		}
+		if ($calcday == "02"){
+			$calcday = 2;
+		}
+		if ($calcday == "03"){
+			$calcday = 3;
+		}
+		if ($calcday == "04"){
+			$calcday = 4;
+		}
+		if ($calcday == "05"){
+			$calcday = 5;
+		}
+		if ($calcday == "06"){
+			$calcday = 6;
+		}
+		if ($calcday == "07"){
+			$calcday = 7;
+		}
+		if ($calcday == "08"){
+			$calcday = 8;
+		}
+		if ($calcday == "09"){
+			$calcday = 9;
 		}
 		$startcounter++;
 		if($totalcounter === "nej"){
