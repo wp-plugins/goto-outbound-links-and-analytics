@@ -3,7 +3,7 @@
 Plugin Name: Goto Outbound Links and Analytics
 Plugin URI: http://wordpress.org/extend/plugins/goto-outbound-links-and-analytics/
 Description: Create and analyze your outbound "Goto" links. Designed for affiliates.
-Version: 1.12
+Version: 1.13
 Author: Emil Thidell
 Author URI: http://www.emilthidell.se
 License: GPL2

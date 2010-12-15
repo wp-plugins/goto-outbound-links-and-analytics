@@ -10,8 +10,18 @@ $r = mysql_query ( $sql, $cs ) or die ( 'Query Error' );
 
 
 
-$permalink = str_replace($dynstring, "", $_SERVER["REQUEST_URI"]);
-$permalink = str_replace("/","",$permalink);
+$permalink =  $_SERVER["REQUEST_URI"];
+$comp1 = strlen($permalink);
+$comp2 = strrpos($permalink, "/");
+$comp2++;
+if($comp1 === $comp2){
+$permalink = substr($permalink,0,-1);
+}
+$cpos = strrpos($permalink, "/");
+$cpos++;
+$permalink2 = substr($permalink,0,$cpos);
+$permalink = str_replace($permalink2,"",$permalink);
+
 
 while($row = mysql_fetch_array($r))
 	{
@@ -35,5 +45,4 @@ while($row = mysql_fetch_array($r))
 header("HTTP/1.1 301 Moved Permanently"); 
 header('Location: '.$gourl.'');
 mysql_close($cs);
-
 ?>
