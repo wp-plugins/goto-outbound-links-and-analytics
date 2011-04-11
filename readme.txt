@@ -5,26 +5,27 @@ Requires at least: 2.7.1
 Tested up to: 3.0.1
 Stable tag: 1.13
 
-Lets you create and analyze goto links such as http://www.yoursite.com/goto/[link]/.
+Lets you create and analyze goto links such as www.yoursite.com/goto/[link]/.
 
 == Description ==
+Demo: http://www.provabingo.se
 This plugin is designed for affiliates who want to hide the outbound links.
 
 Analyze your clicks with graphs.
 
 Hide your links.
 
-Create and analyze goto links such as http://www.yoursite.com/goto/[link]/.
+Create and analyze goto links such as www.yoursite.com/goto/[link]/.
 
 Ex:
 
-- goto-url: http://www.google.com
+- goto-url: www.google.com
 
 - goto-link: google
 
-- Your link: http://www.yoursite.com/goto/google/
+- Your link: www.yoursite.com/goto/google/
 
-- Redirect you to: http://www.google.com
+- Redirect you to: www.google.com
 
 == Installation ==
 
