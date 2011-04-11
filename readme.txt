@@ -8,7 +8,8 @@ Stable tag: 1.13
 Lets you create and analyze goto links such as www.yoursite.com/goto/[link]/.
 
 == Description ==
-Demo: http://www.provabingo.se
+Demo: <a href="http://www.provabingo.se">www.provabingo.se</a>
+
 This plugin is designed for affiliates who want to hide the outbound links.
 
 Analyze your clicks with graphs.
